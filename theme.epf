@@ -1,4 +1,4 @@
-#Sat Oct 22 20:14:05 CST 2016
+#Sat Oct 22 20:30:32 CST 2016
 @org.eclipse.m2e.editor.xml=1.5.0.20140606-0033
 /instance/org.eclipse.dltk.ruby.ui/variable.instance=82,227,246
 /instance/org.eclipse.datatools.connectivity.db.generic.ui/TerminalPrefInvertColors=true
@@ -188,7 +188,7 @@
 @org.eclipse.rse.files.ui=3.2.200.201403211850
 @org.eclipse.wst.xml.xpath2.processor.doc.user=2.0.0.v201105190326
 /instance/org.epic.perleditor/printMarginColor=141,141,138
-/instance/org.eclipse.wst.html.ui/autoProposeCode=<=.abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVW
+/instance/org.eclipse.wst.html.ui/autoProposeCode=<\=.abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVW
 /instance/org.eclipse.pde.api.tools.ui/TerminalPrefInvertColors=true
 /instance/org.eclipse.jetty.webapp/overriddenByCSS=,TerminalPrefInvertColors,
 @org.eclipse.equinox.p2.repository=2.3.0.v20131211-1531
@@ -227,7 +227,7 @@
 /instance/eclihx.ui/hx_editor_bracket_color=249,250,244
 /instance/org.eclipse.m2e.core/TerminalPrefInvertColors=true
 /instance/org.eclipse.cdt.ui/c_comment_task_tag=255,255,255
-/instance/org.eclipse.ui.ide/platformState=1469106667344
+/instance/org.eclipse.ui.ide/platformState=1469106667348
 /instance/org.eclipse.jdt.doc.user/TerminalPrefInvertColors=true
 @org.eclipse.jpt.jpa.eclipselink.ui=2.4.0.v201310142259
 /instance/org.scala-ide.sdt.core/syntaxColouring.character.colour=236,228,126
@@ -273,6 +273,7 @@
 /instance/de.walware.statet.r.ui/text_R_rNumbers.color=196,140,255
 @org.eclipse.cdt.core.win32=5.2.0.201202111925
 /instance/org.eclipse.jst.jsf.core/TerminalPrefInvertColors=true
+@io.emmet.eclipse=1.0.0.201401132323
 /instance/org.cfeclipse.cfml/cftaglibColor=207,191,173
 /instance/org.eclipse.jst.j2ee.ejb.annotation.model/overriddenByCSS=,TerminalPrefInvertColors,
 /instance/org.eclipse.jst.ws.jaxws.doc.user/TerminalPrefInvertColors=true
@@ -588,6 +589,7 @@
 /instance/org.apache.axis/overriddenByCSS=,TerminalPrefInvertColors,
 /instance/org.eclipse.dltk.tcl.ui/DLTK_default=207,191,173
 @org.eclipse.datatools.enablement.ibm.db2.iseries.ui=1.0.3.v201212120614
+/instance/io.emmet.eclipse/TerminalPrefInvertColors=true
 /instance/org.eclipse.jdt.ui/content_assist_parameters_background=52,57,61
 /instance/org.eclipse.jdt.debug.ui/overriddenByCSS=,TerminalPrefInvertColors,
 /instance/org.eclipse.jst.jsp.ui/newFileTemplateName=New JSP File (html)
@@ -2277,6 +2279,7 @@ file_export_version=3.0
 /instance/org.eclipse.emf.codegen.ecore/overriddenByCSS=,TerminalPrefInvertColors,
 /instance/org.eclipse.ui.workbench/ColorsAndFontsPreferencePage.selectedElement=Forg.eclipse.jface.textfont
 /instance/org.eclipse.wst.jsdt.support.ie/TerminalPrefInvertColors=true
+/instance/io.emmet.eclipse/overriddenByCSS=,TerminalPrefInvertColors,
 /instance/org.eclipse.debug.ui/pref_state_memento.org.eclipse.debug.ui.DebugVieworg.eclipse.debug.ui.DebugView=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<DebugViewMemento org.eclipse.debug.ui.BREADCRUMB_DROPDOWN_AUTO_EXPAND\="false"/>
 @org.eclipse.datatools.enablement.sybase=1.0.1.v201107221507
 @org.eclipse.help.webapp=3.6.300.v20140407-1855
@@ -3830,7 +3833,7 @@ file_export_version=3.0
 /instance/org.eclipse.datatools.enablement.sybase.ase.dbdefinition/overriddenByCSS=,TerminalPrefInvertColors,
 @org.eclipse.m2e.profiles.core=1.5.0.20140606-0033
 @org.eclipse.wst.jsdt.debug.rhino=1.0.300.v201402131232
-/instance/org.eclipse.ui.workbench/org.eclipse.ui.commands=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<org.eclipse.ui.commands/>
+/instance/org.eclipse.ui.workbench/org.eclipse.ui.commands=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<org.eclipse.ui.commands>\r\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+D"/>\r\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+D"/>\r\n<keyBinding commandId\="org.eclipse.ui.edit.text.delete.line" contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+W"/>\r\n</org.eclipse.ui.commands>
 /instance/org.erlide.ui/editor/colors/float/style=0
 /instance/org.eclipse.datatools.connectivity.sqm.server.ui/overriddenByCSS=,TerminalPrefInvertColors,
 @org.eclipse.datatools.enablement.ingres=1.0.0.v200906111150
