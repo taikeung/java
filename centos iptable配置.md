@@ -39,3 +39,5 @@ systemctl enable iptables.service #设置防火墙开机启动
     SELINUX=disabled #增加   
     :wq! #保存退出    
     setenforce 0 #使配置立即生效    
+    
+---
