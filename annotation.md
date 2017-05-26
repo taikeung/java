@@ -20,7 +20,7 @@ public @interface Timer(){
 public class TimerAspect {   
 
     // 标示遇到Timer这个注解的方法进行拦截 @Around 等注解可查看 spring aop相关知识  
-    @Around(value = "@annotation(Timer)")
+    @Around(value = "@annotation(timer)")
     public Object recordTime(ProceedingJoinPoint join, Timer timer) throws Throwable  
     {  
         // 获取到使用了注解的方法的参数
