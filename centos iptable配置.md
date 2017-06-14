@@ -41,3 +41,12 @@ systemctl enable iptables.service #设置防火墙开机启动
     setenforce 0 #使配置立即生效    
     
 ---
+
+- 三.centos 7手动开放端口
+1. 查询端口号：   
+firewall-cmd --query-port=8020/tcp
+查询端口号8020 是否开启！
+
+2. 开永久端口号：    
+firewall-cmd --add-port=8020/tcp --permanent
+这里把8020替换为需要开的端口号， --permanent是指永久的意思。
