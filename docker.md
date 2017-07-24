@@ -19,6 +19,9 @@
         ssh-keygen -q -t ecdsa -f /etc/ssh/ssh_host_ecdsa_key -N ' '		
         ssh-keygen -t dsa -f /etc/ssh/ssh_host_ed25519_key  -N ' '
     - docker commit containerId 保存的镜像名称
+    - 配置ssh无密码登录：    
+    	$ ssh-keygen -t dsa -P '' -f ~/.ssh/id_dsa    
+		$ cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys   
 3. 搭建镜像仓库:
 	- 拉取镜像仓库的镜像:docker pull registry
 	- 启动镜像：docker run -d -p 5000:5000 -v /opt/data/registry:/tmp/registry registry  
@@ -84,3 +87,5 @@
     -  host模式：- -net=host，容器和宿主机共用宿主机ip和端口
     -  container模式：- -net=container:containerId or containerName，新创建的容器与已存在的容器共享networknamespace
     -  none模式: - - net=none,创建容器不指定ip，端口，需要自定义。
+
+6. Failed to get D-Bus connection: Operation not permitted:运行时加上:/usr/sbin/init
