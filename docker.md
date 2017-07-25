@@ -89,3 +89,5 @@
     -  none模式: - - net=none,创建容器不指定ip，端口，需要自定义。
 
 6. Failed to get D-Bus connection: Operation not permitted:运行时加上:/usr/sbin/init
+7. iptables转发端口:将容器的8000端口映射到docker主机的8001端口
+	iptables -t nat -A  DOCKER -p tcp --dport 8001 -j DNAT --to-destination 172.17.0.19:8000
