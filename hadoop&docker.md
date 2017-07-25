@@ -120,3 +120,42 @@
         在master节点上执行start-all.sh命令
         
 	```
+    
+    - 配置spark集群:
+    ```
+		tar -zxvf scala-2.11.4.tgz
+        tar -zxvf spark-2.2.0-bin-hadoop2.6.tgz
+        
+        vi /etc/profile:
+        
+        export JAVA_HOME=/usr/java/jdk1.8.0_91
+        export SCALA_HOME=/usr/scala/scala-2.11.4
+        export SPARK_HOME=/home/spark/spark-2.2.0-bin-hadoop2.6
+        export HADOOP_HOME=/home/hadoop/hadoop-2.6.5
+        export HADOOP_CONFIG_HOME=$HADOOP_HOME/etc/hadoop
+        export 	PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$JAVA_HOME/bin:$SCALA_HOME/bin:$SPARK_HOME/bin:$SPARK_HOME/sbin
+    	export CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+        
+        source /etc/profile
+        
+        cd /home/spark/spark-2.2.0-bin-hadoop2.6/conf
+        cp spark-env.sh.template spark-env.sh
+		cp slaves.template slaves
+        
+        vi spark-env.sh:
+        export JAVA_HOME=/usr/java/jdk1.8.0_91
+        export SCALA_HOME=/home/scala/scala-2.11.4
+        export SPARK_MASTER_IP=172.17.0.2
+        export SPARK_WORKER_MEMORY=2g
+        export HADOOP_CONF_DIR=/home/spark/spark-2.2.0-bin-hadoop2.6/conf
+        
+        vi slaves:
+        172.17.0.2
+        172.17.0.3
+        172.17.0.4
+
+		cd /home/spark/spark-2.2.0-bin-hadoop2.6/sbin
+        ./start-all.sh
+
+	```
+    查看集群信息:http://172.17.0.2:8080
