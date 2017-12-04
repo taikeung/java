@@ -19,4 +19,5 @@ mongodb安装
     ```
 - 以授权的方式启动
 > mongod --config /home/data/software/mongodb/bin/mongodb.conf
+> mongo  -u root -p Fid123456 --authenticationDatabase admin
 
