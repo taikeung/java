@@ -1,0 +1,47 @@
+#java web app container image
+
+FROM centos:latest
+MAINTAINER andyhoo<andy396877565@163.com>
+
+#Define default command. sia/Shanghai
+ENV TZ=Asia/Shanghai
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+#open ssh login
+RUN yum -y install openssh-server openssh-client
+
+RUN sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config 
+RUN useradd admin  
+RUN echo "admin:admin" | chpasswd  
+RUN echo "admin   ALL=(ALL)       ALL" >> /etc/sudoers
+
+RUN ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key
+RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key
+RUN mkdir /var/run/sshd  
+EXPOSE 22  
+CMD ["/usr/sbin/sshd", "-D"]
+
+#Makejava and tomcat install directory
+
+RUN mkdir /usr/local/java
+RUN mkdir /usr/local/tomcat
+
+#Copy jre and tomcat into image
+
+ADD jdk1.8.0_91 /usr/local/java
+ADD tomcat-7.0.73 /usr/local/tomcat
+
+RUN sed -i '$a\export LANG=en_US.UTF-8' /etc/profile  
+RUN sed -i '$a\JAVA_HOME=/usr/local/java' /etc/profile  
+RUN sed -i '$a\JAE_HOME=/usr/local/java/jre' /etc/profile  
+RUN sed -i '$a\PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin' /etc/profile  
+RUN sed -i '$a\CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib' /etc/profile  
+RUN sed -i '$a\export JAVA_HOME JRE_HOME PATH CLASSPATH' /etc/profile
+
+#Exposehttp port
+EXPOSE 8080
+EXPOSE 80
+EXPOSE 6379
+EXPOSE 8443
+EXPOSE 3306
+
